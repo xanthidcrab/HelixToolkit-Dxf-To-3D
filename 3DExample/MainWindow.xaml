@@ -35,6 +35,20 @@
                        Padding="5"
                        FontSize="14"
                        Text="X: --, Y: --, Z: --" />
+
+            <Label Content="Extrude Value:" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+            <TextBox x:Name="extrudeValueTextBox"
+                     Width="100"
+                     Margin="5"
+                     VerticalAlignment="Center"
+                     FontSize="20"
+                      />
+            <Button Content="Extrude"
+                    Width="100"
+                    Margin="5"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Click="ExtrudeButton_Click" />
         </StackPanel>
         <ListBox x:Name="dxfListBox"
                  Grid.Row="1"

@@ -62,5 +62,11 @@ namespace _3DExample
             DxfHelper.ReadDxfFile(helixViewport3D, dxfListBox.SelectedItem.ToString());
             DxfHelper.AddLightingAndEnvironment(helixViewport3D);
         }
+
+        private void ExtrudeButton_Click(object sender, RoutedEventArgs e)
+        {
+            DxfHelper.ReadDxfFile(helixViewport3D, dxfListBox.SelectedItem.ToString(), Convert.ToDouble(extrudeValueTextBox.Text));
+            DxfHelper.AddLightingAndEnvironment(helixViewport3D);
+        }
     }
 }

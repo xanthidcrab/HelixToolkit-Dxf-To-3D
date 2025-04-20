@@ -17,7 +17,7 @@ namespace _3DExample.Helpers
     {
         public static string DxfPath = AppDomain.CurrentDomain.BaseDirectory + "DxfFiles\\";
 
-        public static void ReadDxfFile(HelixViewport3D helixViewport3D, string path)
+        public static void ReadDxfFile(HelixViewport3D helixViewport3D, string path, double extrudeVal =30)
         {
             DxfDocument dxfDocument = DxfDocument.Load(path);
             
@@ -56,7 +56,7 @@ namespace _3DExample.Helpers
 
                         // viewport’a ekle
                         //helixViewport3D.Children.Add(visual);
-                        DrawExtrudedPolylineWithVisual3D(helixViewport3D, lwpoly);
+                        DrawExtrudedPolylineWithVisual3D(helixViewport3D, lwpoly,extrudeVal);
                         polys.Add(lwpoly);
                     }
                     else if (entity is Insert insert)
